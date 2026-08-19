@@ -1,0 +1,128 @@
+.hero {
+  position: relative;
+  padding-top: 48px;
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  padding-bottom: 88px;
+}
+
+.hero__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clay-deep);
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.hero__title {
+  font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  max-width: 620px;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--olive-deep);
+}
+
+.hero__lede {
+  margin-top: 26px;
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 480px;
+  line-height: 1.65;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.hero__cta-primary {
+  background: var(--clay);
+  color: var(--paper);
+  padding: 16px 30px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hero__cta-primary:hover {
+  background: var(--clay-deep);
+  transform: translateY(-2px);
+}
+
+.hero__cta-secondary {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.hero__cta-secondary:hover {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.hero__badges {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 44px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.hero__dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--ink-soft);
+  display: inline-block;
+}
+
+.hero__figure {
+  position: relative;
+}
+
+.hero__img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px 120px 6px 6px;
+  object-fit: cover;
+  box-shadow: 0 30px 60px -30px rgba(46, 42, 34, 0.35);
+}
+
+.hero__scribble {
+  position: absolute;
+  top: -6px;
+  left: -18px;
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  color: var(--olive-deep);
+  transform: rotate(-6deg);
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+  }
+  .hero__figure { order: -1; max-width: 340px; margin: 0 auto; }
+  .hero__lede { max-width: 100%; }
+  .hero__scribble { display: none; }
+}

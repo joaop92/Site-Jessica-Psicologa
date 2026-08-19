@@ -1,0 +1,15 @@
+.growth-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100px;
+  height: 100%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.55;
+}
+
+@media (max-width: 900px) {
+  .growth-line { display: none; }
+}

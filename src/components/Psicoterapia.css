@@ -1,0 +1,45 @@
+.psicoterapia {
+  position: relative;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 96px 0;
+}
+
+.psicoterapia__inner {
+  max-width: 760px;
+}
+
+.psicoterapia__scribble {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  color: var(--olive);
+  margin-bottom: 6px;
+  transform: rotate(-2deg);
+  display: inline-block;
+}
+
+.psicoterapia__quote {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  line-height: 1.28;
+  color: var(--olive-deep);
+  font-style: italic;
+  margin-bottom: 44px;
+}
+
+.psicoterapia__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.psicoterapia__body p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+@media (max-width: 640px) {
+  .psicoterapia { padding: 64px 0; }
+}
